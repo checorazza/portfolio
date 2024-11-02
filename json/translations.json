@@ -1,0 +1,32 @@
+{
+  "en": {
+    "heroSubtitle": "Data Analyst",
+    "aboutTitle": "About Me",
+    "aboutText": "placeholder",
+    "servicesTitle": "Services",
+    "services": ["placeholder", "placeholder", "placeholder"],
+    "experienceTitle": "Experience",
+    "skillsTitle": "Skills",
+    "contactTitle": "Contact Me"
+  },
+  "es": {
+    "heroSubtitle": "Analista de Datos",
+    "aboutTitle": "Sobre Mí",
+    "aboutText": "placeholder",
+    "servicesTitle": "Servicios",
+    "services": ["placeholder", "placeholder", "placeholder"],
+    "experienceTitle": "Experiencia",
+    "skillsTitle": "Habilidades",
+    "contactTitle": "Contacto"
+  },
+  "fr": {
+    "heroSubtitle": "placeholder",
+    "aboutTitle": "placeholder",
+    "aboutText": "placeholder",
+    "servicesTitle": "placeholder",
+    "services": ["placeholder", "placeholder", "placeholder"],
+    "experienceTitle": "Expérience",
+    "skillsTitle": "Compétences",
+    "contactTitle": "Contactez Moi"
+  }
+}

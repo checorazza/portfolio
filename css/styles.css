@@ -1,0 +1,191 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f7fc;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("path/to/galaxy-background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+/* Hero Content Animations */
+#hero .hero-content h1 {
+  font-size: 3.5rem;
+  animation: fadeInDown 1s ease-out, textGlow 2s ease-in-out infinite alternate;
+}
+
+#hero .hero-content h2 {
+  font-size: 1.5rem;
+  color: #fef9ff;
+  margin-top: 0.5rem;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* Floating Astronaut Styling */
+.astronaut {
+  width: 150px;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  animation: floatAstronaut 5s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+/* Background Image Parallax */
+#hero::before {
+  content: "";
+  background: rgb(5, 11, 41);
+  background: radial-gradient(
+    circle,
+    rgba(5, 11, 41, 1) 0%,
+    rgba(44, 50, 140, 1) 100%
+  );
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(-1px) scale(1.5);
+  z-index: -1;
+}
+
+/* Animations */
+@keyframes floatAstronaut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  }
+}
+
+/* Section Styling */
+section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.service-card {
+  background-color: #ffeef2;
+  padding: 2rem;
+  margin: 1rem;
+  display: inline-block;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateZ(0);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* Timeline Styling */
+.timeline {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.timeline-item {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f9f9fc;
+  border-left: 3px solid #b6e0fe;
+  position: relative;
+}
+
+.timeline-item span {
+  font-weight: bold;
+  color: #b6e0fe;
+}
+
+.timeline-item::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #ffcfe1;
+  border-radius: 50%;
+  position: absolute;
+  left: -9px;
+  top: 10px;
+}
+
+#skills ul {
+  list-style: none;
+}
+
+#skills li {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background-color: #b6e0fe;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact */
+#contact p {
+  font-size: 1.1rem;
+}
