@@ -189,3 +189,48 @@ h2 {
 #contact p {
   font-size: 1.1rem;
 }
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e;
+    color: #f3f7fc;
+  }
+
+  /* Hero Section for Dark Mode */
+  #hero {
+    color: #fef9ff;
+    background-image: url("path/to/galaxy-background-dark.jpg");
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Service Card Dark Mode */
+  .service-card {
+    background-color: #333;
+    color: #f3f7fc;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Timeline Items in Dark Mode */
+  .timeline-item {
+    background-color: #333;
+    border-left: 3px solid #ffcfe1;
+  }
+
+  /* Skills Tags Dark Mode */
+  #skills li {
+    background-color: #555;
+    color: #f3f7fc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Contact Section Dark Mode */
+  #contact p {
+    color: #ccc;
+  }
+
+  /* Floating Astronaut for Dark Mode */
+  .astronaut {
+    filter: brightness(0.8); /* Slight dimming for better contrast */
+  }
+}
