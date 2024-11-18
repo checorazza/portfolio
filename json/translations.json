@@ -1,32 +1,35 @@
 {
   "en": {
     "heroSubtitle": "Data Analyst",
-    "aboutTitle": "About Me",
-    "aboutText": "placeholder",
+    "languageDropdown": "English",
+    "aboutText": "Passionate Data Analyst with solid knowledge in Python, Excel, Power BI and Tableau. Thriving on turning complex datasets into clear insights that support strategic goals.",
     "servicesTitle": "Services",
     "services": ["placeholder", "placeholder", "placeholder"],
     "experienceTitle": "Experience",
+    "projectsTitle": "Projects",
     "skillsTitle": "Skills",
     "contactTitle": "Contact Me"
   },
   "es": {
     "heroSubtitle": "Analista de Datos",
-    "aboutTitle": "Sobre Mí",
+    "languageDropdown": "Español",
     "aboutText": "placeholder",
     "servicesTitle": "Servicios",
     "services": ["placeholder", "placeholder", "placeholder"],
     "experienceTitle": "Experiencia",
+    "projectsTitle": "Proyectos",
     "skillsTitle": "Habilidades",
     "contactTitle": "Contacto"
   },
   "fr": {
     "heroSubtitle": "placeholder",
-    "aboutTitle": "placeholder",
+    "languageDropdown": "Français",
     "aboutText": "placeholder",
     "servicesTitle": "placeholder",
     "services": ["placeholder", "placeholder", "placeholder"],
     "experienceTitle": "Expérience",
     "skillsTitle": "Compétences",
+    "projectsTitle": "placeholder",
     "contactTitle": "Contactez Moi"
   }
 }

@@ -13,224 +13,53 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Hero Section */
-#hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-image: url("path/to/galaxy-background.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  perspective: 1000px;
+/*Social media icons for Hero section*/
+.social-icons {
+  font-size: 5vh;
+  transition: color 0.2s ease;
 }
 
-/* Hero Content Animations */
-#hero .hero-content h1 {
-  font-size: 3.5rem;
-  animation: fadeInDown 1s ease-out, textGlow 2s ease-in-out infinite alternate;
+.social-icons:hover {
+  color: #2a72c3;
 }
 
-#hero .hero-content h2 {
-  font-size: 1.5rem;
-  color: #fef9ff;
-  margin-top: 0.5rem;
-  animation: fadeInUp 1.2s ease-out;
-}
-
-/* Floating Astronaut Styling */
-.astronaut {
-  width: 150px;
-  position: absolute;
-  right: 10%;
-  top: 20%;
-  animation: floatAstronaut 5s ease-in-out infinite alternate;
-  z-index: 1;
-}
-
-/* Background Image Parallax */
-#hero::before {
-  content: "";
-  background: rgb(5, 11, 41);
-  background: radial-gradient(
-    circle,
-    rgba(5, 11, 41, 1) 0%,
-    rgba(44, 50, 140, 1) 100%
-  );
-  background-size: cover;
-  background-position: center;
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateZ(-1px) scale(1.5);
-  z-index: -1;
-}
-
-/* Animations */
-@keyframes floatAstronaut {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(20px);
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes textGlow {
-  0% {
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-  }
-  100% {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
-  }
-}
-
-/* Section Styling */
-section {
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.service-card {
-  background-color: #ffeef2;
-  padding: 2rem;
-  margin: 1rem;
-  display: inline-block;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transform: translateZ(0);
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-10px) scale(1.05);
-}
-
-/* Timeline Styling */
-.timeline {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.timeline-item {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background-color: #f9f9fc;
-  border-left: 3px solid #b6e0fe;
-  position: relative;
-}
-
-.timeline-item span {
-  font-weight: bold;
-  color: #b6e0fe;
-}
-
-.timeline-item::before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  background-color: #ffcfe1;
+/* Custom styling for the profile image border */
+.profile-image {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  position: absolute;
-  left: -9px;
-  top: 10px;
+  object-fit: cover;
+  border: 4px solid #4a90e2;
+  transition: transform 0.2s ease;
 }
 
-#skills ul {
-  list-style: none;
+.profile-image:hover {
+  transform: scale(1.08);
 }
 
-#skills li {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  background-color: #b6e0fe;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Custom styling for detail items */
+.detail-item {
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 15px;
 }
 
-/* Contact */
-#contact p {
-  font-size: 1.1rem;
+/*Custom card animation for small bootstrap cards*/
+
+.custom-card-smaller {
+  transition: transform 0.2s ease;
 }
 
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1e1e1e;
-    color: #f3f7fc;
-  }
+.custom-card-smaller:hover {
+  transform: scale(1.1);
+}
 
-  /* Hero Section for Dark Mode */
-  #hero {
-    color: #fef9ff;
-    background-image: url("path/to/galaxy-background-dark.jpg");
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  }
+/*Same style but for larger cards*/
+.custom-card-larger {
+  transition: transform 0.2s ease;
+}
 
-  /* Service Card Dark Mode */
-  .service-card {
-    background-color: #333;
-    color: #f3f7fc;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-  }
-
-  /* Timeline Items in Dark Mode */
-  .timeline-item {
-    background-color: #333;
-    border-left: 3px solid #ffcfe1;
-  }
-
-  /* Skills Tags Dark Mode */
-  #skills li {
-    background-color: #555;
-    color: #f3f7fc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  }
-
-  /* Contact Section Dark Mode */
-  #contact p {
-    color: #ccc;
-  }
-
-  /* Floating Astronaut for Dark Mode */
-  .astronaut {
-    filter: brightness(0.8); /* Slight dimming for better contrast */
-  }
+.custom-card-larger:hover {
+  transform: scale(1.08);
 }

@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const languageSelect = document.getElementById("languageSelect");
+  const languageDropdown = document.getElementById("languageDropdown");
+  const languageItems = document.querySelectorAll(
+    ".dropdown-menu .dropdown-item"
+  );
 
   // Load translations JSON file
   async function loadTranslations() {
     try {
-      const response = await fetch("../json/translations.json"); // Update the path if needed
+      const response = await fetch("../json/translations.json"); // Adjust path if needed
       if (!response.ok) throw new Error("Network response was not ok");
       return await response.json();
     } catch (error) {
@@ -26,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update text elements with translation data
     document.getElementById("heroSubtitle").textContent = langData.heroSubtitle;
-    document.getElementById("aboutTitle").textContent = langData.aboutTitle;
+    document.getElementById("languageDropdown").textContent =
+      langData.languageDropdown;
     document.getElementById("aboutText").textContent = langData.aboutText;
     document.getElementById("servicesTitle").textContent =
       langData.servicesTitle;
@@ -36,16 +40,30 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("service2").textContent = langData.services[1];
     document.getElementById("service3").textContent = langData.services[2];
 
+    // Experience
     document.getElementById("experienceTitle").textContent =
       langData.experienceTitle;
+
+    // Projects
+    document.getElementById("projectsTitle").textContent =
+      langData.projectsTitle;
+
+    // Skills
     document.getElementById("skillsTitle").textContent = langData.skillsTitle;
-    document.getElementById("contactTitle").textContent = langData.contactTitle;
   }
 
-  // Listen for language selection changes
-  languageSelect.addEventListener("change", (e) => {
-    const selectedLanguage = e.target.value;
-    updateContent(selectedLanguage);
+  // Set up event listeners on each language item in the dropdown
+  languageItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      const selectedLanguage = item.getAttribute("data-lang");
+
+      // Update the dropdown toggle text to show the selected language
+      languageDropdown.textContent = item.textContent;
+
+      // Update page content to the selected language
+      updateContent(selectedLanguage);
+    });
   });
 
   // Set default language to English on load
