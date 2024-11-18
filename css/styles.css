@@ -63,3 +63,20 @@ body {
 .custom-card-larger:hover {
   transform: scale(1.08);
 }
+
+/* Dark Mode */
+.dark-mode .text-muted {
+  color: #aaaaaa !important;
+}
+.dark-mode .text-dark {
+  color: #ffffff !important;
+}
+.dark-mode .detail-item {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 15px;
+}
+.dark-mode .container {
+  background-color: #121212;
+}

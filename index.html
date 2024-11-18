@@ -74,11 +74,13 @@
     ></script>
     <!--translation script-->
     <script src="./js/translation.js"></script>
+    <!--script.js-->
+    <script src="./js/script.js"></script>
 
     <!--navbar-->
     <nav
-      class="navbar navbar-expand-lg bg-body-tertiary rounded"
-      aria-label="Thirteenth navbar example"
+      class="navbar navbar-expand-lg bg-body-tertiary rounded sticky-top"
+      aria-label="Navbar"
     >
       <div class="container-fluid">
         <button
@@ -102,10 +104,24 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
           </ul>
+          <!--Toggle color mode-->
+          <div class="mode-switch">
+            <button
+              title="Use dark mode"
+              id="dark"
+              class="btn btn-sm btn-default text-secondary"
+            >
+              <span class="material-icons"> dark_mode </span>
+            </button>
+            <button
+              title="Use light mode"
+              id="light"
+              class="btn btn-sm btn-default text-secondary"
+            >
+              <span class="material-icons"> light_mode </span>
+            </button>
+          </div>
           <!-- Bootstrap Dropdown for Language Selection -->
           <div class="dropdown">
             <button
@@ -175,7 +191,7 @@
     </div>
 
     <!-- About Me Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5">
       <div class="container d-flex justify-content-center">
         <div class="card text-center shadow-sm p-4" style="max-width: 600px">
           <img
@@ -245,7 +261,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5">
       <div class="container">
         <h2 class="text-center fw-bold mb-4" id="experienceTitle">
           Experience
@@ -266,7 +282,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
+    <section id="projects" class="py-5">
       <div class="container">
         <h2 class="text-center fw-bold mb-4" id="projectsTitle">Projects</h2>
         <div class="row">
@@ -312,7 +328,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5">
       <div class="container">
         <h2 class="text-center fw-bold mb-4" id="skillsTitle">Skills</h2>
         <div class="row g-3 justify-content-center">

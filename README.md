@@ -18,7 +18,7 @@
 - ✅ Add meta tags
 - ✅ Create a translation function that translates the website's content
 - Set up translations file (currently everything's placeholder)
-- Set up dark mode
+- ✅ Set up dark mode
 - Work on the hero section style
 - ✅ Make the website responsive
 - Place proper images
